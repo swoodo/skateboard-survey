@@ -14,7 +14,7 @@
 
 body {
   position: relative;
-  background: url('images/concrete_seamless.png');
+  background: url(../images/concrete_seamless.png);
   background-repeat: repeat;
   
 }
@@ -263,7 +263,7 @@ FORM
 section {
   position: relative;
   background-color:#2F3339;
-  background: url("/images/concrete_wall.png");
+  background: url(../images/concrete_wall.png);
   background-repeat: repeat;
   border-radius: 10px;
   padding: 0em 2em 4em 2em;
@@ -529,7 +529,7 @@ input {
     opacity: 0.2;
     border-radius: 10px;
     box-shadow: inset -250px 0 60px 10px #2F3339;
-    background: url("/images/deck-stack.jpg");
+    background: url(../images/deck-stack.jpg);
     background-repeat: no-repeat;
   }
 
@@ -543,7 +543,7 @@ input {
     opacity: 0.2;
     border-radius: 10px;
     box-shadow: inset -250px 0 60px 10px #2F3339;
-    background: url("/images/trucks.jpg");
+    background: url(../images/trucks.jpg);
     background-repeat: no-repeat;
   }
 
@@ -557,7 +557,7 @@ input {
     opacity: 0.2;
     border-radius: 10px;
     box-shadow: inset -250px 0 60px 10px #2F3339;
-    background: url("/images/wheels.jpg");
+    background: url(../images/wheels.jpg);
     background-repeat: no-repeat;
   }
 
@@ -571,7 +571,7 @@ input {
     opacity: 0.2;
     border-radius: 10px;
     box-shadow: inset -250px 0 60px 10px #2F3339;
-    background: url("/images/rest.jpg");
+    background: url(../images/rest.jpg);
     background-repeat: no-repeat;
   }
 }
