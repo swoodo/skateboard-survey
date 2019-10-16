@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
+
+:root {
+  --primary-color: #ECD063;
+  --secondary-color: #F28727;
+  --secondary-color-dark: #D77820;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  position: relative;
+  background: url('/images/concrete_seamless.png');
+  background-repeat: repeat;
+  
+}
+
+:focus {
+  border: 3px solid var(--primary-color) !important;
+}
+
+/**************
+CONTAINERS
+**************/
+.container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1258px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1497px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1780px) {
+  .container {
+    width: 50%;
+  }
+}
+
+/**************
+TYPOGRAPHY
+**************/
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  color: #707070;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--secondary-color-dark);
+}
+
+.section-title label {
+  text-transform: uppercase;
+  font-size: 5rem;
+  letter-spacing: 0.1rem;;
+  font-family: 'Creepster', cursive;
+
+  color: var(--primary-color);
+  padding: 0.5em 0 0.5em 0;
+}
+
+section {
+  color: var(--primary-color);
+}
+
+input::placeholder {
+  color: #cdcdcd;
+}
+
+.input-title {
+  font-weight: 700;
+}
+
+.the-rest-title-br {
+  display: none;
+}
+
+@media only screen and (min-width: 780px) {
+  .the-rest-title-br {
+    display: block;
+  }
+
+  .the-rest-title-space {
+    display: none;
+  }
+
+  .question-font {
+    font-size: 8rem !important;
+  }
+}
+
+/**************
+LOGO
+**************/
+#logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo img {
+  width: 50%;
+  display: block;
+}
+
+@media only screen and (min-width: 780px) {
+  #logo img {
+    width: 30%;
+  }
+}
+
+/**************
+BUTTONS
+**************/
+.submit-btn {
+  padding: 0.5em 1em 0.5em 1em;
+  margin-top: 1rem;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
+  color: white;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  width: 100%;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  border: 3px solid var(--primary-color);
+}
+
+.submit-btn:active {
+  background-color:var(--secondary-color-dark);
+  box-shadow: none;
+}
+
+.submit-large {
+  display: none;
+}
+
+@media only screen and (min-width: 1066px)  {
+  .submit {
+    display: none;
+  }
+
+  .submit-large {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/**************
+WELCOME
+**************/
+
+/* Bounce animation */
+@keyframes welcomeBounce {
+	0% {
+    transform: translateY(0) skew(0deg, -6deg);
+	}
+	50% {
+    transform: translateY(-20px) skew(0deg, -6deg);
+  }
+  75% {
+    transform: translateY(10px) skew(0deg, -6deg);
+  }
+  100% {
+    transform: translateY(0px) skew(0deg, -6deg);
+	}
+}
+
+.welcome {
+  display: none;
+
+  width: 200px;
+  position: absolute;
+  background: white;
+  top: 9.5em;
+  left: -5em;
+  padding: 0.5em 1.5em 1.5em 1.5em;
+  z-index: 100;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+
+  border-radius: 5px;
+  animation: welcomeBounce 0.3s;
+  -webkit-animation: welcomeBounce 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  top: 10em;
+  left: 9.5em;
+  
+  width: 1.8em;
+  height: 3em;
+  background-color: white;
+
+  transform: skew(40deg, 10deg);
+}
+
+.welcome::after {
+  content: "";
+  position: absolute;
+  top: 12.2em;
+  left: 11.9em;
+  
+  width: 0;
+  height: 0;
+  border-top: 1.8em solid white; 
+  border-left: 0.8em solid transparent;
+  border-right: 0.4em solid transparent;
+
+  transform: skew(40deg, 20deg);
+}
+
+#description::before {
+  content: "";
+  position: absolute;
+  top: -1.3em;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  z-index: -1;
+  transform: skew(0deg, 10deg);
+}
+
+@media only screen and (min-width: 1258px) {
+  .welcome {
+    display: block;
+  }
+}
+
+/**************
+FORM
+**************/
+section {
+  position: relative;
+  background-color:#2F3339;
+  background: url("/images/concrete_wall.png");
+  background-repeat: repeat;
+  border-radius: 10px;
+  padding: 0em 2em 4em 2em;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+section:first-child {
+  margin-top: 0;
+}
+
+.section-title {
+  flex: 1 0 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  -webkit-transition: text-shadow 0.4s; /* Safari prior 6.1 */
+  transition: text-shadow 0.4s;
+}
+
+.section-title-shadow {
+  text-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+}
+
+
+.section-content {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 0;
+  align-items: center;
+}
+
+input {
+  padding: 1em;
+  outline: none;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+
+.name,
+.age {
+  flex: 1 100%;
+}
+
+.name input,
+.trucks-brand input,
+.wheels-brand input,
+.wheels-size input,
+.durometer input,
+.bearings-brand input,
+.griptape input,
+.textarea {
+  width: calc(100% - 2.5em);
+}
+
+.age {
+  padding-top: 1em;
+}
+
+.age .input-title,
+.name .input-title,
+.email .input-title {
+  position: relative;
+}
+
+.age .input-title::after,
+.name .input-title::after,
+.email .input-title::after {
+  content: "*";
+  color: #F15F46;
+  right: -0.5rem;
+  font-size: 0.7rem;
+  position: absolute;
+  
+}
+
+.age input,
+.email input,
+.deck-brand input {
+  width: calc(100% - 2.5em);
+}
+
+.email {
+  flex: 1 100%;
+  padding-top: 1em;
+}
+
+.deck-brand,
+.deck-size,
+.axel-size,
+.trucks-type,
+.wheels-size,
+.durometer,
+.wheels-type,
+.risers,
+.griptape,
+.hardware {
+  padding-top: 1em;
+}
+
+.deck-brand,
+.deck-size,
+.deck-type,
+.trucks-type,
+.trucks-brand,
+.axel-size,
+.wheels-brand,
+.wheels-size,
+.durometer,
+.wheels-type,
+.bearings-brand,
+.risers,
+.griptape,
+.hardware,
+.why,
+.comments {
+  flex: 1 100%;
+}
+
+.deck-size input {
+  width: 20%;
+}
+
+.radio,
+.checkmark {
+  margin-right: 1em;
+  color: #F0F0F0;
+}
+
+.radio:hover,
+.checkmark:hover {
+  cursor: pointer;
+}
+
+:checked + span{
+  color:var(--primary-color);
+}
+
+.axel-size select,
+.hardware select {
+  border: 3px solid transparent;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+
+.axel-size select:hover,
+.hardware select:hover {
+  cursor: pointer;
+}
+
+.comments {
+  padding-top: 2em;
+}
+
+.textarea {
+  border: 3px solid transparent;
+  border-radius: 5px;
+  margin-top: 1em !important;
+  padding: 1em;
+  height: 5em;
+}
+
+@media only screen and (min-width: 780px) {
+  section {
+    display: flex;
+    padding-top: 4em;
+  }
+
+  section {
+    padding-left: 0;
+  }
+
+  .name input,
+  .age input,
+  .email input,
+  .deck-brand input,
+  .trucks-brand input,
+  .wheels-brand input,
+  .wheels-size input,
+  .durometer input,
+  .bearings-brand input,
+  .griptape input,
+  .textarea  {
+    width: calc(100% - 6em);
+  }
+
+  .trucks-brand,
+  .wheels-brand,
+  .bearings-brand,
+  .why {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1066px) {
+  section {
+    display: flex;
+    padding: 0;
+  }
+
+  .section-content {
+    padding: 2em 0 2em 0;
+  }
+  
+  .age,
+  .axel-size,
+  .wheels-size {
+    padding-top: 0;
+  }
+
+  .name input,
+  .email input,
+  .deck-brand input,
+  .trucks-brand input,
+  .wheels-brand input,
+  .bearings-brand input,
+  .griptape input {
+    width: initial;
+  }
+
+  .textarea {
+    width: 50%;
+  }
+
+  .age input{
+    width: 15%;
+  }
+
+  .wheels-size input,
+  .durometer input {
+    width: 20%;
+  }
+
+  .name,
+  .age,
+  .deck-brand,
+  .deck-size,
+  .trucks-brand,
+  .axel-size,
+  .wheels-brand,
+  .wheels-size,
+  .bearings-brand,
+  .griptape {
+    flex: 1 0 0;
+  }
+
+  .axel-size {
+    margin-top: 0em;
+  }
+
+  /* Section images fade*/
+  section:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    opacity: 0.2;
+    border-radius: 10px;
+    box-shadow: inset -250px 0 60px 10px #2F3339;
+    background: url("/images/deck-stack.jpg");
+    background-repeat: no-repeat;
+  }
+
+  section:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    opacity: 0.2;
+    border-radius: 10px;
+    box-shadow: inset -250px 0 60px 10px #2F3339;
+    background: url("/images/trucks.jpg");
+    background-repeat: no-repeat;
+  }
+
+  section:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    opacity: 0.2;
+    border-radius: 10px;
+    box-shadow: inset -250px 0 60px 10px #2F3339;
+    background: url("/images/wheels.jpg");
+    background-repeat: no-repeat;
+  }
+
+  section:nth-child(5)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    opacity: 0.2;
+    border-radius: 10px;
+    box-shadow: inset -250px 0 60px 10px #2F3339;
+    background: url("/images/rest.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+/**************
+FOOTER
+**************/
+footer {
+  padding: 2em;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+

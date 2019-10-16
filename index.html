@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Skateboard Survey">
+  <meta name="author" content="swoodo">
+
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+
+  <title>Skateboard Survey</title>
+</head>
+
+<body>
+
+  <div id="main">
+    
+    <div class="container">
+
+      <!-- Logo Top -->
+      <div id="logo">
+        <img src="images/logo.svg" alt="Skateboard Survey Logo">
+      </div>
+
+      <!-- Welcome popup -->
+      <div class="welcome">
+            <h1 id="title">Hello!</h1>
+            <br/><p id="description">We are researching your favorite brands and preferred setups.<br/><br/>Please help!</p>
+      </div>
+
+      <!-- FORM START -->
+      <form id="survey-form" action="#" method="post">
+
+        <!-- Info Section -->
+        <section class="info">
+          <!-- Info Title -->
+          <div class="section-title">
+            <label>Info</label>
+          </div>
+          <!-- Name -->
+          <div class="section-content">
+            <div class="name">
+              <label id="name-label" class="input-title">Name</label><br/>
+              <input id="name" type="text" name="name" required  placeholder="Rodney">
+            </div>
+            <!-- Age -->
+            <div class="age">
+              <label id="number-label" class="input-title">Age</label><br/>
+              <input id="number" type="number" name="age" min="1" max="99" required placeholder="53">
+            </div>
+            <!-- Email -->
+            <div class="email">
+              <label id="email-label" class="input-title">Email</label><br/>
+              <input id="email" type="email" name="email" placeholder="xxxxx@xxx.com" required>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Deck Section -->
+        <section class="deck">
+          <!-- Deck Title -->
+          <div class="section-title">
+            <label>Deck</label>
+          </div>
+
+          <div class="section-content">
+            <!-- Deck Type -->
+            <div class="deck-type">
+              <label class="input-title">Type</label><br />
+              <label>
+                <input type="radio" name="deck_type", value="skateboard">
+                <span class="radio">Skateboard</span>
+              </label>
+              <label>
+                  <input type="radio" name="deck_type", value="cruiser">
+                  <span class="radio">Cruiser</span>
+              </label>
+              <label>
+                  <input type="radio" name="deck_type", value="longboard">
+                  <span class="radio">Longboard</span>
+              </label>
+            </div>
+            <!-- Deck Brand -->
+            <div class="deck-brand">
+              <label class="input-title">Brand</label><br />
+              <input type="text" name="deck_brand" placeholder="Almost">
+            </div>
+            <!-- Deck Size -->
+            <div class="deck-size">
+              <label class="input-title">Size</label><br />
+              <input type="number" step="any" name="deck_size_width" placeholder="8.5" min="1" max="99">
+              x
+              <input type="number" step="any" name="deck_size_height" placeholder="32" min="1" max="99">
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Trucks Section -->
+        <section class="trucks">
+          <!-- Trucks Title -->
+          <div class="section-title">
+            <label>Trucks</label>
+          </div>
+
+          <div class="section-content">
+            <!-- Trucks Brand -->
+            <div class="trucks-brand">
+              <label class="input-title">Brand</label><br />
+              <input type="text" name="trucks_brand" placeholder="Independent">
+            </div>
+            <!-- Axel Size -->
+            <div class="axel-size">
+              <label class="input-title">Axle Size</label><br />
+              <select id="dropdown" name="axel_size">
+                <option>6.5</option>
+                <option>6.9</option>
+                <option>7.0</option>
+                <option>7.13</option>
+                <option>7.2</option>
+                <option>7.3</option>
+                <option>7.5</option>
+                <option>7.6</option>
+                <option>7.625</option>
+                <option>7.63</option>
+                <option>7.75</option>
+                <option>8.0</option>
+                <option>8.25</option>
+                <option>8.35</option>
+                <option>8.38</option>
+                <option>8.5</option>
+                <option>8.75</option>
+                <option>9.0</option>
+                <option>9.125</option>
+                <option>9.35</option>
+                <option>9.5</option>
+                <option>9.75</option>
+                <option>10.0</option>
+                <option>10.5</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <!-- Trucks Type -->
+            <div class="trucks-type">
+              <label class="input-title">Type</label><br />
+              <label>
+                <input type="radio" name="trucks_type", value="low">
+                <span class="radio">Low</span>
+              </label>
+              <label>
+                <input type="radio" name="trucks_type", value="mid">
+                <span class="radio">Mid</span>
+              </label>
+              <label>
+                <input type="radio" name="trucks_type", value="high">
+                <span class="radio">High</span>
+              </label>
+              <label>
+                <input type="radio" name="trucks_type", value="not_sure">
+                <span class="radio">Not Sure</span>
+              </label>
+            </div>
+          
+          </div>
+        </section>
+
+        <!-- Wheels Section -->
+        <section class="wheels">
+          <!-- Wheels Title -->
+          <div class="section-title">
+            <label>Wheels</label>
+          </div>
+
+          <div class="section-content">
+            <!-- Wheels Brand -->
+            <div class="wheels-brand">
+              <label class="input-title">Brand</label><br />
+              <input type="text" name="wheels_brand" placeholder="Spitfire">
+            </div>
+            <!-- Wheels Size -->
+            <div class="wheels-size">
+              <label class="input-title">Size</label><br />
+              <input type="number" step="any" name="wheels_size" placeholder="52" min="50" max="78">
+            </div>
+            <!-- Wheels Durometer -->
+            <div class="durometer">
+              <label class="input-title">Durometer</label><br />
+              <input type="number" step="any" name="durometer" placeholder="99" min="74" max="103">
+            </div>
+            <!-- Wheels Type -->
+            <div class="wheels-type">
+              <label class="input-title">Type</label><br />
+              <label>
+                <input type="radio" name="wheels_type", value="park-street">
+                <span class="radio">Park/Street</span>
+              </label>
+              <label>
+                <input type="radio" name="wheels_type", value="cruiser-soft">
+                <span class="radio">Cruiser/Soft</span>
+              </label>
+              <label>
+                <input type="radio" name="wheels_type", value="Longboard">
+                <span class="radio">Longboard</span>
+              </label>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- The Rest Section -->
+        <section class="the-rest">
+          <!-- The Rest Title -->
+          <div class="section-title" style="text-align: center;">
+            <label>The<br class="the-rest-title-br" /><span class="the-rest-title-space" > </span>Rest</label>
+          </div>
+
+          <div class="section-content">
+            <!-- Bearings -->
+            <div class="bearings-brand">
+              <label class="input-title">Bearings Brand</label><br />
+              <input type="text" name="bearings_brand" placeholder="Bones">
+            </div>
+            <!-- Risers -->
+            <div class="risers">
+              <label class="input-title">Risers</label><br />
+              <label>
+                <input type="radio" name="risers", value="yes">
+                <span class="radio">Yup</span>
+              </label>
+              <label>
+                <input type="radio" name="risers", value="no">
+                <span class="radio">Nope</span>
+              </label>
+            </div>
+            <!-- Griptape -->
+            <div class="griptape">
+              <label class="input-title">Griptape</label><br />
+              <input type="text" name="griptape" placeholder="MOB">
+            </div>
+            <!-- Hardware -->
+            <div class="hardware">
+              <label class="input-title">Hardware</label><br />
+              <select name="hardware">
+                <option>7/8"</option>
+                <option>1"</option>
+                <option>1 1/8"</option>
+                <option>1 1/4"</option>
+                <option>1 1/2"</option>
+                <option>2"</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Questions Section -->
+        <section class="questions">
+          <!-- Questions Title -->
+          <div class="section-title">
+            <label class="question-font">?</label>
+          </div>
+          <!-- Why You Skate -->  
+          <div class="section-content">
+            <div class="why">
+              <label class="input-title" name="why_skate">Why Do You Skate?</label><br />
+              <!-- Why You SKate Checkbox -->
+              <label class="container">
+                <input value="fun" type="checkbox" name="fun">
+                <span class="checkmark">Fun</span>    
+              </label>
+
+              <label class="container">
+                <input value="exercise" type="checkbox" name="exercise">
+                <span class="checkmark">Exercise</span> 
+              </label>
+
+              <label class="container">
+                <input value="transport" type="checkbox" name="transport">
+                <span class="checkmark">Transport</span>     
+              </label>
+
+              <br />
+              <label class="container">
+                <input value="wellbeing" type="checkbox" name="wellbeing">
+                <span class="checkmark">Wellbeing/Stress Relief</span>
+                
+              </label>
+
+              <label class="container">
+                <input value="dont_skate" type="checkbox" name="dont_skate">
+                <span class="checkmark">I Don't Skate (yet)</span>
+                
+              </label> 
+            </div>
+            <!-- Additional Comments -->  
+            <div class="comments">
+
+              <label class="input-title comments">Additional Comments</label><br />
+              <!-- Text Area -->
+              <textarea  class="textarea" name="additional_comments"></textarea>
+
+            </div>
+
+          </div>
+  
+        </section>
+
+        <!-- Bottom logo -->
+        <div id="logo">
+          <img src="images/logo-bottom.svg" alt="Skateboard Survey Logo">
+
+          <!-- Submit Button Large -->
+          <div class="submit-large">
+              <button class="submit-btn" name="submit_button" type="submit">
+                Submit
+              </button>
+          </div>
+
+        </div>
+
+        <!-- Submit Button Small -->
+        <div class="submit">
+          <button id="submit" class="submit-btn" name="submit_button" type="submit">
+            Submit
+          </button>
+        </div>
+
+      </form>
+      <!-- FORM END -->
+
+    </div>
+    <!-- Container End-->
+
+    <!-- Footer -->
+    <footer>
+        ©<span class="current-year"></span> SWOODO | ALL RIGHTS RESERVED
+    </footer>
+  </div>
+
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
